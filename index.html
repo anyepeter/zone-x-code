@@ -9,7 +9,7 @@
 </head>
 <body>
     <niv>
-        <div class="nav">
+        <div id="navbar" class="nav">
         <diV class=left>
            <span><img class="text" src="images/logo.png"></span>
             <ul>
@@ -91,9 +91,23 @@
              <div class="box8">
                  <h3>Author</h3>
                  <p>Anye chendi</p>
-                 <a href="mailto:chendipet@gmail.com">:petzyrockchendi@gmail.com</a>
+               <a href="mailto:chendipet@gmail.com">:petzyrockchendi@gmail.com</a>
              </div>
         </div>
     </footer>
+    <script type="text/javascript">
+         var LastscrollTop = 0;
+         navber = document.getElementById("navbar");
+         window.addEventListener("scroll" , function(){
+             var scrollTop = window.pageXOffset || document.documentElement.scrollTop;
+             if(scrollTop > LastscrollTop) {
+                 navbar.style.top= "-100px";
+             }
+             else{
+                 navbar.style.top = "0";
+             }
+             LastscrollTop = scrollTop;
+         })  
+    </script>
 </body>
 </html>
